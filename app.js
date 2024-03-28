@@ -4,8 +4,15 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+const hjemRouter = require('./routes/hjem');
+const omossRouter = require('./routes/omoss');
+const terapihundenRouter = require('./routes/terapihunden');
+const besøkshundRouter = require('./routes/besøkshunden');
+const skolehundRouter = require('./routes/skolehunden');
+const lenkerRouter = require('./routes/lenker');
+const tilbyrRouter = require('./routes/tilbyr');
+const ipressenRouter = require('./routes/ipressen');
+const kontaktRouter = require('./routes/kontakt');
 
 var app = express();
 
@@ -19,8 +26,16 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/', hjemRouter);
+app.use('/omoss', omossRouter);
+app.use('/terapihunden', terapihundenRouter);
+app.use('/besokshunden', besøkshundRouter);
+app.use('/skolehunden', skolehundRouter);
+app.use('/lenker', lenkerRouter);
+app.use('/tilbyr', tilbyrRouter);
+app.use('/ipressen', ipressenRouter);
+app.use('/kontakt', kontaktRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
