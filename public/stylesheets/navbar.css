@@ -1,0 +1,16 @@
+#navbar, #navbartext, #navbarDropdown, #navbardropdown{
+    font-family:  "Garamond", serif;
+    background-color: #daedf1;
+}
+
+#navbartext, #navbarDropdown{
+    color: #8897AA;
+}
+
+#navbar, #navbartext, #navbarDropdown{
+    font-size: 120%;
+}
+
+nav{
+    padding-bottom: 300px;
+}
