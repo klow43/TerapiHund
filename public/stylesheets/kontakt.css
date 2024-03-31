@@ -1,0 +1,13 @@
+#kontakttop{
+    margin-top: 100px;
+    text-align: center;
+}
+
+#BTH-logo-background{
+    z-index: -1;
+}
+
+#errorMessage{
+    text-align: center;
+    color: rgb(177, 13, 13);
+}
